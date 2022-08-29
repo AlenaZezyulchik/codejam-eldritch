@@ -148,6 +148,7 @@ function formDeckForLevel(key, greenCards, brownCards, blueCards) {
     newArrFirstStage = [...getRandomElements(greenCards, data.firstStage.greenCardsCount).concat(getRandomElements(brownCards, data.firstStage.brownCardsCount)).concat(getRandomElements(blueCards, data.firstStage.blueCardsCount))];
     newArrSecondStage = [...getRandomElements(greenCards, data.secondStage.greenCardsCount).concat(getRandomElements(brownCards, data.secondStage.brownCardsCount)).concat(getRandomElements(blueCards, data.secondStage.blueCardsCount))];
     newArrThirdStage = [...getRandomElements(greenCards, data.thirdStage.greenCardsCount).concat(getRandomElements(brownCards, data.thirdStage.brownCardsCount)).concat(getRandomElements(blueCards, data.thirdStage.blueCardsCount))];
+    itemsForAllStage = [...newArrFirstStage, ...newArrSecondStage, ...newArrThirdStage];
 }
 
 
@@ -158,7 +159,6 @@ function getCardsForStages() {
     shuffle(newArrFirstStage);
     shuffle(newArrSecondStage);
     shuffle(newArrThirdStage);
-    itemsForAllStage = [...newArrFirstStage, ...newArrSecondStage, ...newArrThirdStage];
 }
 
 //функция сборки колоды для выбранной карты древнего
